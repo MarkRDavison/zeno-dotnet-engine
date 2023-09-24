@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Author>Mark Davison</Author>
+    <PackageId>markdavison.engine.inputabstractions</PackageId>
+    <IsPackable>true</IsPackable>
+    <Description>Input abstractions for the engine</Description>
+  </PropertyGroup>
+
+</Project>
