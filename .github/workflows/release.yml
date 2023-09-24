@@ -28,7 +28,7 @@ jobs:
 
       - name: pack
         working-directory: ./src
-        run: dotnet pack -p:version=${GITHUB_REF#refs/*/v} -o "$PWD/nuget"
+        run: dotnet pack -p:version=${{github.ref_name}} -o "$PWD/nuget"
 
       - name: nuget
         working-directory: ./src
