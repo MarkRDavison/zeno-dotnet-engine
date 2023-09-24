@@ -27,7 +27,7 @@ public class SceneTransitionService : ISceneTransitionService
         }
         else
         {
-            Console.WriteLine("Scene {0} was not registered.", name);
+            Console.Error.WriteLine("Scene {0} was not registered.", name);
         }
     }
 

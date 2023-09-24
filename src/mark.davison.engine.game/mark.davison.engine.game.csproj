@@ -21,4 +21,8 @@
     <ProjectReference Include="..\mark.davison.engine.renderer.abstractions\mark.davison.engine.renderer.abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\Interfaces\" />
+  </ItemGroup>
+
 </Project>

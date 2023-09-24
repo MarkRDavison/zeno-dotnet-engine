@@ -16,6 +16,7 @@
     <ProjectReference Include="..\..\Raylib\mark.davison.engine.core.raylib\mark.davison.engine.core.raylib.csproj" />
     <ProjectReference Include="..\..\Raylib\mark.davison.engine.input.raylib\mark.davison.engine.input.raylib.csproj" />
     <ProjectReference Include="..\..\Raylib\mark.davison.engine.renderer.raylib\mark.davison.engine.renderer.raylib.csproj" />
+    <ProjectReference Include="..\mark.davison.engine.examples.common\mark.davison.engine.examples.common.csproj" />
   </ItemGroup>
 
   <ItemGroup>

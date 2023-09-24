@@ -13,7 +13,7 @@ public class Startup
     {
         var configured = Configuration.GetSection(ApplicationConfiguration.Section);
         services.Configure<ApplicationConfiguration>(configured);
-        services.UseGame<RaylibApplication>(typeof(Startup));
+        services.UseGame<RaylibApplication>(typeof(Startup), typeof(Scenes));
         services.AddHostedService<ApplicationHostedService>();
     }
 }

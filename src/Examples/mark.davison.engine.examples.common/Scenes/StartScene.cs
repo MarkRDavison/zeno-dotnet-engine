@@ -1,6 +1,4 @@
-﻿using mark.davison.engine.core.abstractions.Services;
-
-namespace mark.davison.engine.examples.raylib.Scenes;
+﻿namespace mark.davison.engine.examples.common.Scenes;
 
 [SceneRegistration(Name = Scenes.Start)]
 public class StartScene : IScene

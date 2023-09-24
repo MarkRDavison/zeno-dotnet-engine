@@ -5,23 +5,25 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mark.davison.engine.core.abstractions", "mark.davison.engine.core.abstractions\mark.davison.engine.core.abstractions.csproj", "{3E893CD2-1AB6-42EA-82B8-CCD8902155CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.input.abstractions", "mark.davison.engine.input.abstractions\mark.davison.engine.input.abstractions.csproj", "{87B438AA-2223-48EC-BB3C-035A798168F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mark.davison.engine.input.abstractions", "mark.davison.engine.input.abstractions\mark.davison.engine.input.abstractions.csproj", "{87B438AA-2223-48EC-BB3C-035A798168F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.game", "mark.davison.engine.game\mark.davison.engine.game.csproj", "{0B0FE824-BBB0-4DF2-BE40-879C05037C96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mark.davison.engine.game", "mark.davison.engine.game\mark.davison.engine.game.csproj", "{0B0FE824-BBB0-4DF2-BE40-879C05037C96}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Raylib", "Raylib", "{D9E9299D-DD1F-4D6C-883E-4059BA45BB53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.renderer.abstractions", "mark.davison.engine.renderer.abstractions\mark.davison.engine.renderer.abstractions.csproj", "{5D79B5A7-C316-4DAC-8CEF-D2D35EF6DB9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mark.davison.engine.renderer.abstractions", "mark.davison.engine.renderer.abstractions\mark.davison.engine.renderer.abstractions.csproj", "{5D79B5A7-C316-4DAC-8CEF-D2D35EF6DB9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.renderer.raylib", "Raylib\mark.davison.engine.renderer.raylib\mark.davison.engine.renderer.raylib.csproj", "{30405FBE-95DA-4160-B78B-719A5ED36B04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mark.davison.engine.renderer.raylib", "Raylib\mark.davison.engine.renderer.raylib\mark.davison.engine.renderer.raylib.csproj", "{30405FBE-95DA-4160-B78B-719A5ED36B04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.core.raylib", "Raylib\mark.davison.engine.core.raylib\mark.davison.engine.core.raylib.csproj", "{8411D63F-B74A-4BE7-8101-51647823D788}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mark.davison.engine.core.raylib", "Raylib\mark.davison.engine.core.raylib\mark.davison.engine.core.raylib.csproj", "{8411D63F-B74A-4BE7-8101-51647823D788}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.input.raylib", "Raylib\mark.davison.engine.input.raylib\mark.davison.engine.input.raylib.csproj", "{387DF3B3-851C-4A5D-8266-2B572517D3ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mark.davison.engine.input.raylib", "Raylib\mark.davison.engine.input.raylib\mark.davison.engine.input.raylib.csproj", "{387DF3B3-851C-4A5D-8266-2B572517D3ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{25093815-A02C-44CB-AA9C-71284A409EC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.examples.raylib", "Examples\mark.davison.engine.examples.raylib\mark.davison.engine.examples.raylib.csproj", "{32513C90-EF8E-410F-BA31-557CF0084EAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mark.davison.engine.examples.raylib", "Examples\mark.davison.engine.examples.raylib\mark.davison.engine.examples.raylib.csproj", "{32513C90-EF8E-410F-BA31-557CF0084EAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.examples.common", "Examples\mark.davison.engine.examples.common\mark.davison.engine.examples.common.csproj", "{4C673833-AE7C-4BFB-8C8E-AF4AD5372EEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{32513C90-EF8E-410F-BA31-557CF0084EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32513C90-EF8E-410F-BA31-557CF0084EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32513C90-EF8E-410F-BA31-557CF0084EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C673833-AE7C-4BFB-8C8E-AF4AD5372EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C673833-AE7C-4BFB-8C8E-AF4AD5372EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C673833-AE7C-4BFB-8C8E-AF4AD5372EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C673833-AE7C-4BFB-8C8E-AF4AD5372EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{8411D63F-B74A-4BE7-8101-51647823D788} = {D9E9299D-DD1F-4D6C-883E-4059BA45BB53}
 		{387DF3B3-851C-4A5D-8266-2B572517D3ED} = {D9E9299D-DD1F-4D6C-883E-4059BA45BB53}
 		{32513C90-EF8E-410F-BA31-557CF0084EAF} = {25093815-A02C-44CB-AA9C-71284A409EC7}
+		{4C673833-AE7C-4BFB-8C8E-AF4AD5372EEF} = {25093815-A02C-44CB-AA9C-71284A409EC7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33F055DA-CF77-4F59-8876-D730AC4C0C58}
