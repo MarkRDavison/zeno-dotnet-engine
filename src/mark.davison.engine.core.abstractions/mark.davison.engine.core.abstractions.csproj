@@ -4,10 +4,10 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<Author>Mark Davison</Author>
-	<PackageId>mark.davison.engine.core.abstractions</PackageId>
-	<IsPackable>true</IsPackable>
-	<Description>Core abstractions for the engine</Description>
+    <Author>Mark Davison</Author>
+    <PackageId>markdavison.engine.core.abstractions</PackageId>
+    <IsPackable>true</IsPackable>
+    <Description>Core abstractions for the engine</Description>
   </PropertyGroup>
 
 </Project>
