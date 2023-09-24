@@ -7,6 +7,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mark.davison.engine.core.ab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.input.abstractions", "mark.davison.engine.input.abstractions\mark.davison.engine.input.abstractions.csproj", "{87B438AA-2223-48EC-BB3C-035A798168F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.game", "mark.davison.engine.game\mark.davison.engine.game.csproj", "{0B0FE824-BBB0-4DF2-BE40-879C05037C96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Raylib", "Raylib", "{D9E9299D-DD1F-4D6C-883E-4059BA45BB53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.renderer.abstractions", "mark.davison.engine.renderer.abstractions\mark.davison.engine.renderer.abstractions.csproj", "{5D79B5A7-C316-4DAC-8CEF-D2D35EF6DB9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.renderer.raylib", "Raylib\mark.davison.engine.renderer.raylib\mark.davison.engine.renderer.raylib.csproj", "{30405FBE-95DA-4160-B78B-719A5ED36B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.core.raylib", "Raylib\mark.davison.engine.core.raylib\mark.davison.engine.core.raylib.csproj", "{8411D63F-B74A-4BE7-8101-51647823D788}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.input.raylib", "Raylib\mark.davison.engine.input.raylib\mark.davison.engine.input.raylib.csproj", "{387DF3B3-851C-4A5D-8266-2B572517D3ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +33,36 @@ Global
 		{87B438AA-2223-48EC-BB3C-035A798168F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87B438AA-2223-48EC-BB3C-035A798168F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87B438AA-2223-48EC-BB3C-035A798168F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B0FE824-BBB0-4DF2-BE40-879C05037C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B0FE824-BBB0-4DF2-BE40-879C05037C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B0FE824-BBB0-4DF2-BE40-879C05037C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B0FE824-BBB0-4DF2-BE40-879C05037C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D79B5A7-C316-4DAC-8CEF-D2D35EF6DB9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D79B5A7-C316-4DAC-8CEF-D2D35EF6DB9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D79B5A7-C316-4DAC-8CEF-D2D35EF6DB9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D79B5A7-C316-4DAC-8CEF-D2D35EF6DB9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30405FBE-95DA-4160-B78B-719A5ED36B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30405FBE-95DA-4160-B78B-719A5ED36B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30405FBE-95DA-4160-B78B-719A5ED36B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30405FBE-95DA-4160-B78B-719A5ED36B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8411D63F-B74A-4BE7-8101-51647823D788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8411D63F-B74A-4BE7-8101-51647823D788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8411D63F-B74A-4BE7-8101-51647823D788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8411D63F-B74A-4BE7-8101-51647823D788}.Release|Any CPU.Build.0 = Release|Any CPU
+		{387DF3B3-851C-4A5D-8266-2B572517D3ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{387DF3B3-851C-4A5D-8266-2B572517D3ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{387DF3B3-851C-4A5D-8266-2B572517D3ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{387DF3B3-851C-4A5D-8266-2B572517D3ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30405FBE-95DA-4160-B78B-719A5ED36B04} = {D9E9299D-DD1F-4D6C-883E-4059BA45BB53}
+		{8411D63F-B74A-4BE7-8101-51647823D788} = {D9E9299D-DD1F-4D6C-883E-4059BA45BB53}
+		{387DF3B3-851C-4A5D-8266-2B572517D3ED} = {D9E9299D-DD1F-4D6C-883E-4059BA45BB53}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33F055DA-CF77-4F59-8876-D730AC4C0C58}
 	EndGlobalSection
 EndGlobal
