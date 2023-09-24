@@ -10,4 +10,8 @@
     <Description>Raylib implementation of Renderer for the engine</Description>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\mark.davison.engine.game\mark.davison.engine.game.csproj" />
+  </ItemGroup>
+
 </Project>

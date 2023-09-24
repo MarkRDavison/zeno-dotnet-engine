@@ -1,1 +1,1 @@
-﻿
+﻿global using mark.davison.engine.core.abstractions.Infrastructure;

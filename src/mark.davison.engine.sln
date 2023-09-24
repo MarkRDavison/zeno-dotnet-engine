@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.core.ra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.input.raylib", "Raylib\mark.davison.engine.input.raylib\mark.davison.engine.input.raylib.csproj", "{387DF3B3-851C-4A5D-8266-2B572517D3ED}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{25093815-A02C-44CB-AA9C-71284A409EC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.examples.raylib", "Examples\mark.davison.engine.examples.raylib\mark.davison.engine.examples.raylib.csproj", "{32513C90-EF8E-410F-BA31-557CF0084EAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,10 @@ Global
 		{387DF3B3-851C-4A5D-8266-2B572517D3ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{387DF3B3-851C-4A5D-8266-2B572517D3ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{387DF3B3-851C-4A5D-8266-2B572517D3ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32513C90-EF8E-410F-BA31-557CF0084EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32513C90-EF8E-410F-BA31-557CF0084EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32513C90-EF8E-410F-BA31-557CF0084EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32513C90-EF8E-410F-BA31-557CF0084EAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +69,7 @@ Global
 		{30405FBE-95DA-4160-B78B-719A5ED36B04} = {D9E9299D-DD1F-4D6C-883E-4059BA45BB53}
 		{8411D63F-B74A-4BE7-8101-51647823D788} = {D9E9299D-DD1F-4D6C-883E-4059BA45BB53}
 		{387DF3B3-851C-4A5D-8266-2B572517D3ED} = {D9E9299D-DD1F-4D6C-883E-4059BA45BB53}
+		{32513C90-EF8E-410F-BA31-557CF0084EAF} = {25093815-A02C-44CB-AA9C-71284A409EC7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33F055DA-CF77-4F59-8876-D730AC4C0C58}
