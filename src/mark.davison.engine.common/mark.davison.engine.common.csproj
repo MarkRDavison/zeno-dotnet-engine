@@ -5,13 +5,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Author>Mark Davison</Author>
-    <PackageId>markdavison.engine.renderer.abstractions</PackageId>
+    <PackageId>markdavison.engine.common</PackageId>
     <IsPackable>true</IsPackable>
-    <Description>Renderer abstractions for the engine</Description>
+    <Description>Common types and utilities for the engine</Description>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\mark.davison.engine.common\mark.davison.engine.common.csproj" />
-  </ItemGroup>
 
 </Project>

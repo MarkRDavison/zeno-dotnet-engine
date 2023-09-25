@@ -16,13 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\mark.davison.engine.common\mark.davison.engine.common.csproj" />
     <ProjectReference Include="..\mark.davison.engine.core.abstractions\mark.davison.engine.core.abstractions.csproj" />
     <ProjectReference Include="..\mark.davison.engine.input.abstractions\mark.davison.engine.input.abstractions.csproj" />
     <ProjectReference Include="..\mark.davison.engine.renderer.abstractions\mark.davison.engine.renderer.abstractions.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 
 </Project>

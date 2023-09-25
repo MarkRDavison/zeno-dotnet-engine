@@ -2,5 +2,6 @@
 
 public interface IImmediateModeRenderer
 {
-    void RenderText(string text, int x, int y, int fontSize);
+    void RenderText(string text, int x, int y, int fontSize, Colour colour);
+    void RenderQuad(Rect<float> target, Colour colour);
 }

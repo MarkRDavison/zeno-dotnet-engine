@@ -5,8 +5,12 @@ public static class DependencyInjectionExtensions
     public static IServiceCollection UseGame<TApplication>(this IServiceCollection services, params Type[] types)
         where TApplication : class, IApplication
     {
-        services.AddSingleton<IApplication, TApplication>();
-        return services.RegisterScenes<TApplication>(types);
+        services
+            .AddSingleton<IApplication, TApplication>()
+            .AddSingleton<ISpritesheetManager, SpritesheetManager>()
+            .AddSingleton<IInputActionManager, InputActionManager>()
+            .RegisterScenes<TApplication>(types);
+        return services;
     }
 
     private static IServiceCollection RegisterScenes<TApplication>(this IServiceCollection services, Type[] types)

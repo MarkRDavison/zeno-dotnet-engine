@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\mark.davison.engine.game\mark.davison.engine.game.csproj" />
+    <ProjectReference Include="..\mark.davison.engine.input.raylib\mark.davison.engine.input.raylib.csproj" />
+    <ProjectReference Include="..\mark.davison.engine.renderer.raylib\mark.davison.engine.renderer.raylib.csproj" />
   </ItemGroup>
 
 </Project>

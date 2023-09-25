@@ -15,5 +15,6 @@ public class Startup
         services.Configure<ApplicationConfiguration>(configured);
         services.UseGame<RaylibApplication>(typeof(Startup), typeof(Scenes));
         services.AddHostedService<ApplicationHostedService>();
+        services.UseRaylibBackend();
     }
 }

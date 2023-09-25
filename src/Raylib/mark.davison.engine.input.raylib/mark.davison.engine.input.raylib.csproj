@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -9,6 +9,10 @@
     <IsPackable>true</IsPackable>
     <Description>Raylib implementation of Input for the engine</Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Raylib-cs" Version="4.5.0.4" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\mark.davison.engine.game\mark.davison.engine.game.csproj" />
