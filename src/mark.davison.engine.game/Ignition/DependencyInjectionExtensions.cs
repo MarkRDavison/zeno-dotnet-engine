@@ -9,10 +9,28 @@ public static class DependencyInjectionExtensions
             .AddSingleton<IApplication, TApplication>()
             .AddSingleton<ISpritesheetManager, SpritesheetManager>()
             .AddSingleton<IInputActionManager, InputActionManager>()
-            .RegisterScenes<TApplication>(types);
+            .RegisterScenes<TApplication>(types)
+            .RegisterGame(types);
+
         return services;
     }
 
+    private static IServiceCollection RegisterGame(this IServiceCollection services, Type[] types)
+    {
+        foreach (var t in types.SelectMany(_ => _.Assembly.GetTypes()))
+        {
+            if (t.IsAssignableTo(typeof(IGame)))
+            {
+                services.AddTransient(t);
+            }
+            if (t.IsAssignableTo(typeof(IGameRenderer)))
+            {
+                services.AddTransient(t);
+            }
+        }
+
+        return services;
+    }
     private static IServiceCollection RegisterScenes<TApplication>(this IServiceCollection services, Type[] types)
     {
         List<Tuple<string, Type>> sceneTypes = new();

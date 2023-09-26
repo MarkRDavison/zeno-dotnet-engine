@@ -78,6 +78,7 @@ public abstract class Application : IApplication
 
     public void Stop()
     {
+        _running = false;
         _hostApplicationLifetime.StopApplication();
     }
 }

@@ -37,7 +37,7 @@ public class SpritesheetManager : ISpritesheetManager
         });
     }
 
-    public Rect<float> GetSpriteBounds(string sheetName, string spriteName)
+    public Rect GetSpriteBounds(string sheetName, string spriteName)
     {
 
         if (_sheetCellSizes.TryGetValue(sheetName, out var cellSize) &&
@@ -47,7 +47,7 @@ public class SpritesheetManager : ISpritesheetManager
 
             if (registration != null)
             {
-                return new Rect<float>(
+                return new Rect(
                     cellSize * registration.X,
                     cellSize * registration.Y,
                     cellSize * registration.Width,
@@ -55,6 +55,6 @@ public class SpritesheetManager : ISpritesheetManager
             }
         }
 
-        return new Rect<float>();
+        return new Rect();
     }
 }

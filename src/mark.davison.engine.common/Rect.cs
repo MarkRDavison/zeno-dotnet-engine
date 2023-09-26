@@ -1,13 +1,13 @@
 ﻿namespace mark.davison.engine.common;
 
-public struct Rect<T> where T : struct
+public struct Rect
 {
     public Rect()
     {
 
     }
 
-    public Rect(T x, T y, T width, T height)
+    public Rect(float x, float y, float width, float height)
     {
         X = x;
         Y = y;
@@ -15,8 +15,13 @@ public struct Rect<T> where T : struct
         Height = height;
     }
 
-    public T X { get; set; }
-    public T Y { get; set; }
-    public T Width { get; set; }
-    public T Height { get; set; }
+    public bool Contains(float x, float y)
+    {
+        return X < x && x < X + Width && Y < y && y < Y + Height;
+    }
+
+    public float X { get; set; }
+    public float Y { get; set; }
+    public float Width { get; set; }
+    public float Height { get; set; }
 }

@@ -6,7 +6,9 @@ public static class DependencyInjectionExtensions
     {
         services
             .AddSingleton<IImmediateModeRenderer, RaylibImmediateModeRenderer>()
-            .AddSingleton<IRendererInstance, RaylibRendererInstance>();
+            .AddSingleton<IRendererInstance, RaylibRendererInstance>()
+            .AddSingleton<ITextureManager<Texture2D>, RaylibTextureManager>()
+            .AddSingleton<ITextureManager>(_ => _.GetRequiredService<ITextureManager<Texture2D>>());
 
         return services;
     }

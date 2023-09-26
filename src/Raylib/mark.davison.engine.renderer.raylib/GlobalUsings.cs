@@ -1,5 +1,9 @@
 ﻿global using mark.davison.engine.common;
+global using mark.davison.engine.common.Utility;
 global using mark.davison.engine.renderer.abstractions;
+global using mark.davison.engine.renderer.abstractions.Managers;
+global using mark.davison.engine.renderer.abstractions.Resources;
+global using mark.davison.engine.renderer.raylib.Managers;
 global using Microsoft.Extensions.DependencyInjection;
 global using Raylib_cs;
 global using System.Numerics;
