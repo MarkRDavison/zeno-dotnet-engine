@@ -7,14 +7,16 @@ public class StartScene : IScene
     private float _elapsed = 0.0f;
     private readonly ISceneTransitionService _sceneTransitionService;
     private readonly IImmediateModeRenderer _immediateModeRenderer;
+    private readonly ISoundManager _soundManager;
 
     public StartScene(
         ISceneTransitionService sceneTransitionService,
-        IImmediateModeRenderer immediateModeRenderer
-    )
+        IImmediateModeRenderer immediateModeRenderer,
+        ISoundManager soundManager)
     {
         _sceneTransitionService = sceneTransitionService;
         _immediateModeRenderer = immediateModeRenderer;
+        _soundManager = soundManager;
     }
 
     public void Update(float delta)
@@ -24,6 +26,7 @@ public class StartScene : IScene
         if (_elapsed > TransitionTime)
         {
             _sceneTransitionService.SetScene(Scenes.MainMenu);
+            _soundManager.PlaySound("two_tone");
         }
     }
 

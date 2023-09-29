@@ -9,6 +9,7 @@ public static class ResourceInitialisation
         Files.AddHintPath("C:/Workspace/Git/zeno-dotnet-engine");
         InitTextures(provider);
         InitSpritesheets(provider);
+        InitSounds(provider);
     }
 
     private static void InitTextures(IServiceProvider provider)
@@ -17,6 +18,27 @@ public static class ResourceInitialisation
 
         LoadTexture(tm, "spritesheet", "resources/textures/spritesheet.png");
         LoadTexture(tm, "space-shooter", "resources/textures/space-shooter/sheet.png");
+    }
+
+    private static void InitSounds(IServiceProvider provider)
+    {
+        var sm = provider.GetRequiredService<ISoundManager>();
+
+        LoadSound(sm, "laser1", "resources/sounds/sfx_laser1.ogg");
+        LoadSound(sm, "laser2", "resources/sounds/sfx_laser2.ogg");
+        LoadSound(sm, "lose", "resources/sounds/sfx_lose.ogg");
+        LoadSound(sm, "shield_down", "resources/sounds/sfx_shieldDown.ogg");
+        LoadSound(sm, "shield_up", "resources/sounds/sfx_shieldUp.ogg");
+        LoadSound(sm, "two_tone", "resources/sounds/sfx_twoTone.ogg");
+        LoadSound(sm, "zap", "resources/sounds/sfx_zap.ogg");
+    }
+
+    private static void LoadSound(ISoundManager sm, string soundName, string soundPath)
+    {
+        if (!sm.LoadSound(soundName, soundPath))
+        {
+            throw new InvalidOperationException($"Could not find sound: {soundName} at '{soundPath}'");
+        }
     }
 
     private static void LoadTexture(ITextureManager tm, string textureName, string texturePath)

@@ -25,6 +25,6 @@ public static class Files
             }
         }
 
-        return path;
+        return string.Empty;
     }
 }

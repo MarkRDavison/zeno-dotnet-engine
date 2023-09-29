@@ -8,6 +8,7 @@ public static class DependencyInjectionExtensions
             .AddSingleton<IImmediateModeRenderer, RaylibImmediateModeRenderer>()
             .AddSingleton<IRendererInstance, RaylibRendererInstance>()
             .AddSingleton<ITextureManager<Texture2D>, RaylibTextureManager>()
+            .AddSingleton<ISoundManager, RaylibSoundManager>()
             .AddSingleton<ITextureManager>(_ => _.GetRequiredService<ITextureManager<Texture2D>>());
 
         return services;

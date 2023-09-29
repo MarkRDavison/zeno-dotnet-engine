@@ -1,8 +1,9 @@
 ﻿namespace mark.davison.engine.renderer.raylib.Managers;
 
-public class RaylibTextureManager : ITextureManager<Texture2D>
+public class RaylibTextureManager : ITextureManager<Texture2D>, IDisposable
 {
     private readonly IDictionary<string, Texture2D> _textures;
+    private bool disposedValue;
 
     public RaylibTextureManager()
     {
@@ -47,5 +48,29 @@ public class RaylibTextureManager : ITextureManager<Texture2D>
         _textures.Add(name, Raylib.LoadTexture(resolved));
 
         return true;
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!disposedValue)
+        {
+            if (disposing)
+            {
+                foreach (var (name, texture) in _textures)
+                {
+                    Raylib.UnloadTexture(texture);
+                }
+
+                _textures.Clear();
+            }
+
+            disposedValue = true;
+        }
+    }
+
+    public void Dispose()
+    {
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
     }
 }
