@@ -1,10 +1,4 @@
-﻿using mark.davison.engine.game.Configuration;
-using mark.davison.engine.game.Infrastructure;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
-using Raylib_cs;
-
-namespace mark.davison.engine.core.raylib.Infrastructure;
+﻿namespace mark.davison.engine.core.raylib.Infrastructure;
 
 public class RaylibApplication : Application
 {
@@ -26,7 +20,6 @@ public class RaylibApplication : Application
         Raylib.InitWindow(1440, 900, title);
         Raylib.InitAudioDevice();
     }
-
 
     public override float GetFrameTime() => Raylib.GetFrameTime();
 

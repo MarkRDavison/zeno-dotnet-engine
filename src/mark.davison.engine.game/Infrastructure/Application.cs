@@ -37,6 +37,10 @@ public abstract class Application : IApplication
     {
         Initialise(_applicationConfigurationOptions.Value.TITLE);
 
+        var initer = _serviceProvider.GetService<IApplicationInitialisation>();
+        initer?.InitialiseInputActions(_serviceProvider);
+        initer?.InitialiseResources(_serviceProvider);
+
         var sts = _serviceProvider.GetRequiredService<ISceneTransitionService>();
         sts.SetScene(_applicationConfigurationOptions.Value.START_SCENE);
 

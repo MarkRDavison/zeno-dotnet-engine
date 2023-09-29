@@ -1,4 +1,7 @@
-﻿namespace mark.davison.engine.examples.raylib;
+﻿using mark.davison.engine.core.abstractions.Infrastructure;
+using mark.davison.engine.examples.common.Infrastructure;
+
+namespace mark.davison.engine.examples.raylib;
 
 public class Startup
 {
@@ -16,5 +19,6 @@ public class Startup
         services.UseGame<RaylibApplication>(typeof(Startup), typeof(Scenes));
         services.AddHostedService<ApplicationHostedService>();
         services.UseRaylibBackend();
+        services.AddTransient<IApplicationInitialisation, ExampleApplicationInitialisation>();
     }
 }

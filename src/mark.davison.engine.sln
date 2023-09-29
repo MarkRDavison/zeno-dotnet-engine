@@ -36,7 +36,38 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F27AD474
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mark.davison.engine.game.tests", "Tests\mark.davison.engine.game.tests\mark.davison.engine.game.tests.csproj", "{D7EC1DE3-0328-494D-AB26-BC5DC6BA3988}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mark.davison.engine.common", "mark.davison.engine.common\mark.davison.engine.common.csproj", "{9D95DBD6-DE52-4FB0-A50A-51CF97B5BFFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mark.davison.engine.common", "mark.davison.engine.common\mark.davison.engine.common.csproj", "{9D95DBD6-DE52-4FB0-A50A-51CF97B5BFFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fonts", "Fonts", "{564063F5-BC2C-402A-8CD4-4286492DB0C4}"
+	ProjectSection(SolutionItems) = preProject
+		..\resources\fonts\kenvector_future.ttf = ..\resources\fonts\kenvector_future.ttf
+		..\resources\fonts\kenvector_future_thin.ttf = ..\resources\fonts\kenvector_future_thin.ttf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sounds", "Sounds", "{DA20A93A-9F89-4B1B-960B-2F2AEC35BD23}"
+	ProjectSection(SolutionItems) = preProject
+		..\resources\sounds\sfx_laser1.ogg = ..\resources\sounds\sfx_laser1.ogg
+		..\resources\sounds\sfx_laser2.ogg = ..\resources\sounds\sfx_laser2.ogg
+		..\resources\sounds\sfx_lose.ogg = ..\resources\sounds\sfx_lose.ogg
+		..\resources\sounds\sfx_shieldDown.ogg = ..\resources\sounds\sfx_shieldDown.ogg
+		..\resources\sounds\sfx_shieldUp.ogg = ..\resources\sounds\sfx_shieldUp.ogg
+		..\resources\sounds\sfx_twoTone.ogg = ..\resources\sounds\sfx_twoTone.ogg
+		..\resources\sounds\sfx_zap.ogg = ..\resources\sounds\sfx_zap.ogg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spritesheets", "Spritesheets", "{C6C95A41-7BBE-4419-9D5B-E65D3855C263}"
+	ProjectSection(SolutionItems) = preProject
+		..\resources\textures\space-shooter\sheet.png = ..\resources\textures\space-shooter\sheet.png
+		..\resources\textures\space-shooter\sheet.xml = ..\resources\textures\space-shooter\sheet.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backgrounds", "backgrounds", "{1E110B8E-8E5C-4023-8841-DE89AA51AF80}"
+	ProjectSection(SolutionItems) = preProject
+		..\resources\textures\backgrounds\black.png = ..\resources\textures\backgrounds\black.png
+		..\resources\textures\backgrounds\blue.png = ..\resources\textures\backgrounds\blue.png
+		..\resources\textures\backgrounds\darkPurple.png = ..\resources\textures\backgrounds\darkPurple.png
+		..\resources\textures\backgrounds\purple.png = ..\resources\textures\backgrounds\purple.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -100,6 +131,10 @@ Global
 		{4C673833-AE7C-4BFB-8C8E-AF4AD5372EEF} = {25093815-A02C-44CB-AA9C-71284A409EC7}
 		{04B244B4-C6E3-47B9-8665-318D50EA404D} = {BC5EC3B8-DBCE-4A27-A7FF-92108AA57D16}
 		{D7EC1DE3-0328-494D-AB26-BC5DC6BA3988} = {F27AD474-CE9A-4064-A318-DFD155FB18AD}
+		{564063F5-BC2C-402A-8CD4-4286492DB0C4} = {BC5EC3B8-DBCE-4A27-A7FF-92108AA57D16}
+		{DA20A93A-9F89-4B1B-960B-2F2AEC35BD23} = {BC5EC3B8-DBCE-4A27-A7FF-92108AA57D16}
+		{C6C95A41-7BBE-4419-9D5B-E65D3855C263} = {BC5EC3B8-DBCE-4A27-A7FF-92108AA57D16}
+		{1E110B8E-8E5C-4023-8841-DE89AA51AF80} = {04B244B4-C6E3-47B9-8665-318D50EA404D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33F055DA-CF77-4F59-8876-D730AC4C0C58}
