@@ -33,7 +33,7 @@ public class ECSWorld
 
     public TSystem GetSystem<TSystem>() where TSystem : class, ISystem
     {
-        return Systems.Cast<TSystem>().FirstOrDefault() ?? throw new InvalidOperationException($"ECSWorld does not have a system of type '{typeof(TSystem).Name}'");
+        return Systems.Where(_ => _ as TSystem != null).Cast<TSystem>().FirstOrDefault() ?? throw new InvalidOperationException($"ECSWorld does not have a system of type '{typeof(TSystem).Name}'");
     }
 
     public IEntity AddEntity(string? name = null)

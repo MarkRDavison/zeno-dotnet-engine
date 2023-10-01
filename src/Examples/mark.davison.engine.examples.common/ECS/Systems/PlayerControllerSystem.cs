@@ -1,6 +1,4 @@
-﻿using mark.davison.engine.examples.common.Helpers;
-
-namespace mark.davison.engine.examples.common.ECS.Systems;
+﻿namespace mark.davison.engine.examples.common.ECS.Systems;
 
 public class PlayerControllerSystem : ISystem
 {
@@ -33,6 +31,11 @@ public class PlayerControllerSystem : ISystem
             {
                 var dir = t.Rotation.ToDirection();
                 t.Position += dir * delta * pc.Speed;
+            }
+
+            if (_inputActionManager.IsActionInvoked("FIRE"))
+            {
+                Console.WriteLine("FIRE!");
             }
         }
     }

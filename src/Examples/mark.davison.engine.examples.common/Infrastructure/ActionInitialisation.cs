@@ -24,5 +24,10 @@ public static class ActionInitialisation
             Primary = InputActivationType.KeyHold,
             PrimaryKey = KeyboardKey.KEY_A
         });
+        inputActionManager.RegisterAction("FIRE", new InputAction
+        {
+            Primary = InputActivationType.KeyPress,
+            PrimaryKey = KeyboardKey.KEY_SPACE
+        });
     }
 }
