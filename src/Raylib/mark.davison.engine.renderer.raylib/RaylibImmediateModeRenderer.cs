@@ -50,4 +50,14 @@ public class RaylibImmediateModeRenderer : IImmediateModeRenderer
             rotation,
             new Color(colour.r, colour.g, colour.b, colour.a));
     }
+
+    public void RenderCircle(Vector2 center, float radius, Colour colour)
+    {
+        Raylib.DrawCircle((int)center.X, (int)center.Y, radius, new Color(colour.r, colour.g, colour.b, colour.a));
+    }
+
+    public void RenderCircleOutline(Vector2 center, float radius, Colour colour)
+    {
+        Raylib.DrawCircleLines((int)center.X, (int)center.Y, radius, new Color(colour.r, colour.g, colour.b, colour.a));
+    }
 }

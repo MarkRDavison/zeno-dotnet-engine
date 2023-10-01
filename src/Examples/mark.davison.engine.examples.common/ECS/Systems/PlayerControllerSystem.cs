@@ -9,13 +9,16 @@ public class PlayerControllerSystem : ISystem
         _inputActionManager = inputActionManager;
     }
 
+    public Func<string?, IEntity>? CreateEntityFunc { get; set; }
+
     public void Update(float delta, IEnumerable<IEntity> entities)
     {
-        foreach (IEntity entity in entities)
+        foreach (IEntity entity in entities.ToList()) // TODO: New entities are added to a list, not added to the collection etc...
         {
             var pc = entity.GetComponent<PlayerController>();
             if (pc == null) { continue; }
             var t = entity.GetRequiredComponent<Transform>();
+            var c = entity.GetRequiredComponent<CircleCollider>();
 
             if (_inputActionManager.IsActionInvoked("ROTATE_CW"))
             {
@@ -31,11 +34,15 @@ public class PlayerControllerSystem : ISystem
             {
                 var dir = t.Rotation.ToDirection();
                 t.Position += dir * delta * pc.Speed;
+                c.Center = t.Position;
             }
 
             if (_inputActionManager.IsActionInvoked("FIRE"))
             {
-                Console.WriteLine("FIRE!");
+                if (CreateEntityFunc != null)
+                {
+                    Prefabs.Prefabs.CreatePlayerBullet(CreateEntityFunc(null), t.Position + t.Rotation.ToDirection() * 50.0f, t.Rotation);
+                }
             }
         }
     }

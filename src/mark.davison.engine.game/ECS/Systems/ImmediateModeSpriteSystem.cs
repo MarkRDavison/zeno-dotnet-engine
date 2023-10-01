@@ -1,6 +1,4 @@
-﻿using mark.davison.engine.game.ECS.Components;
-
-namespace mark.davison.engine.game.ECS.Systems;
+﻿namespace mark.davison.engine.game.ECS.Systems;
 
 public class ImmediateModeSpriteSystem : ISystem
 {
@@ -36,7 +34,16 @@ public class ImmediateModeSpriteSystem : ISystem
 
             RenderSpritesheetQuad(renderer, "space-shooter", s.SpriteName, t.Position, t.Rotation + s.OffsetRotation);
 
-            renderer.RenderLine(t.Position, t.Position + ToDirection(t.Rotation) * 128.0f, Colour.BLACK);
+            var dir = ToDirection(t.Rotation);
+
+            renderer.RenderLine(t.Position, t.Position + dir * 128.0f, Colour.BLACK);
+
+            var cc = e.GetComponent<CircleCollider>();
+
+            if (cc != null)
+            {
+                renderer.RenderCircleOutline(t.Position + dir * cc.Offset.Y, cc.Radius, Colour.WHITE);
+            }
         }
     }
     private void RenderSpritesheetQuad(IImmediateModeRenderer renderer, string textureName, string spriteName, Vector2 position, float rotation, Vector2? size = null)
@@ -54,4 +61,6 @@ public class ImmediateModeSpriteSystem : ISystem
             Colour.WHITE);
 
     }
+
+    public Func<string?, IEntity>? CreateEntityFunc { get; set; }
 }

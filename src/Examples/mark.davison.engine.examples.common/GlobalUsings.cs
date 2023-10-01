@@ -10,6 +10,7 @@ global using mark.davison.engine.game.ECS;
 global using mark.davison.engine.game.ECS.Components;
 global using mark.davison.engine.game.ECS.Systems;
 global using mark.davison.engine.game.Infrastructure;
+global using mark.davison.engine.game.Physics;
 global using mark.davison.engine.game.Services.Interfaces;
 global using mark.davison.engine.input.abstractions.Controls;
 global using mark.davison.engine.input.abstractions.Services;

@@ -28,6 +28,7 @@ public class ECSWorld
 
     public void AddSystem<TSystem>(TSystem system) where TSystem : class, ISystem
     {
+        system.CreateEntityFunc = AddEntity;
         Systems.Add(system);
     }
 

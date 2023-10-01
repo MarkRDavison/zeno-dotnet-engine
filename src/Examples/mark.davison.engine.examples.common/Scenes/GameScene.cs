@@ -14,6 +14,7 @@ public class GameScene : GameScene<GameExample, GameRendererExample>
 
     public override void Init(GameExample game, GameRendererExample gameRenderer)
     {
+        game.ECSWorld.AddSystem<BasicKinematicSystem>();
         game.ECSWorld.AddSystem<PlayerControllerSystem>();
         game.ECSWorld.AddSystem<ImmediateModeSpriteSystem>();
 
@@ -24,6 +25,9 @@ public class GameScene : GameScene<GameExample, GameRendererExample>
             t.Position = new Vector2(512.0f + 128.0f, 512.0f);
             var s = e.AddComponent<Sprite>();
             s.SpriteName = "playerShip1_blue";
+            var c = e.AddComponent<CircleCollider>();
+            c.Radius = 35.0f;
+            c.Offset = new Vector2(0.0f, -10.0f);
         }
         {
             var e = game.ECSWorld.AddEntity("ENEMY_GREEN_1");
@@ -33,6 +37,8 @@ public class GameScene : GameScene<GameExample, GameRendererExample>
             var s = e.AddComponent<Sprite>();
             s.SpriteName = "enemyGreen1";
             s.OffsetRotation = 180.0f;
+            var c = e.AddComponent<CircleCollider>();
+            c.Radius = 35.0f;
         }
         {
             var e = game.ECSWorld.AddEntity("ENEMY_BLACK_1");
@@ -42,6 +48,8 @@ public class GameScene : GameScene<GameExample, GameRendererExample>
             var s = e.AddComponent<Sprite>();
             s.SpriteName = "enemyBlack2";
             s.OffsetRotation = 180.0f;
+            var c = e.AddComponent<CircleCollider>();
+            c.Radius = 35.0f;
         }
         {
             var e = game.ECSWorld.AddEntity("ENEMY_BLUE_1");
@@ -51,6 +59,8 @@ public class GameScene : GameScene<GameExample, GameRendererExample>
             var s = e.AddComponent<Sprite>();
             s.SpriteName = "enemyBlue3";
             s.OffsetRotation = 180.0f;
+            var c = e.AddComponent<CircleCollider>();
+            c.Radius = 35.0f;
         }
         {
             var e = game.ECSWorld.AddEntity("ENEMY_RED_1");
@@ -60,6 +70,8 @@ public class GameScene : GameScene<GameExample, GameRendererExample>
             var s = e.AddComponent<Sprite>();
             s.SpriteName = "enemyRed4";
             s.OffsetRotation = 180.0f;
+            var c = e.AddComponent<CircleCollider>();
+            c.Radius = 35.0f;
         }
     }
 }

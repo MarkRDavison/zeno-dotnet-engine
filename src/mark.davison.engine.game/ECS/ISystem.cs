@@ -3,4 +3,5 @@
 public interface ISystem
 {
     void Update(float delta, IEnumerable<IEntity> entities);
+    Func<string?, IEntity>? CreateEntityFunc { get; set; }
 }
