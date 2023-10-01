@@ -19,6 +19,7 @@ public class StartScene : IScene
         _soundManager = soundManager;
     }
 
+    public void Init() { }
     public void Update(float delta)
     {
         _elapsed += delta;

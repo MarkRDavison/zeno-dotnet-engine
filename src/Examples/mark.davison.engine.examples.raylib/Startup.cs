@@ -16,7 +16,9 @@ public class Startup
     {
         var configured = Configuration.GetSection(ApplicationConfiguration.Section);
         services.Configure<ApplicationConfiguration>(configured);
-        services.UseGame<RaylibApplication>(typeof(Startup), typeof(Scenes));
+        services
+            .UseGame<RaylibApplication>(typeof(Startup), typeof(Scenes))
+            .UseECS(typeof(Startup), typeof(Scenes));
         services.AddHostedService<ApplicationHostedService>();
         services.UseRaylibBackend();
         services.AddTransient<IApplicationInitialisation, ExampleApplicationInitialisation>();

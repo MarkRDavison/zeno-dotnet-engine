@@ -10,6 +10,7 @@ public class OptionsScene : IScene
         _immediateModeRenderer = immediateModeRenderer;
     }
 
+    public void Init() { }
     public void Update(float delta)
     {
     }

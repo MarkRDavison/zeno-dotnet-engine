@@ -1,19 +1,21 @@
-﻿namespace mark.davison.engine.examples.common.Infrastructure;
+﻿using mark.davison.engine.game.ECS.Systems;
+
+namespace mark.davison.engine.examples.common.Infrastructure;
 
 public class GameRendererExample : IGameRenderer
 {
+    private readonly GameExample _game;
     private readonly ISpritesheetManager _spritesheetManager;
-    private readonly ITextureManager _textureManager;
     private readonly IImmediateModeRenderer _immediateModeRenderer;
 
     public GameRendererExample(
+        GameExample game,
         ISpritesheetManager spritesheetManager,
-        ITextureManager textureManager,
         IImmediateModeRenderer immediateModeRenderer
     )
     {
+        _game = game;
         _spritesheetManager = spritesheetManager;
-        _textureManager = textureManager;
         _immediateModeRenderer = immediateModeRenderer;
     }
 
@@ -24,12 +26,9 @@ public class GameRendererExample : IGameRenderer
 
     public void Render()
     {
-        var spriteBounds = _spritesheetManager.GetSpriteBounds("spritesheet", "test");
+        var sys = _game.ECSWorld.GetSystem<ImmediateModeSpriteSystem>();
 
-        _immediateModeRenderer.RenderQuad(
-            new Rect(128.0f, 128.0f, 256.0f, 256.0f),
-            spriteBounds,
-            "spritesheet",
-            Colour.WHITE);
+        sys.Render(_immediateModeRenderer, _game.ECSWorld.Entities);
     }
+
 }

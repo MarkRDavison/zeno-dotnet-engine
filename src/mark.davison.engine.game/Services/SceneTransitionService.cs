@@ -22,6 +22,7 @@ public class SceneTransitionService : ISceneTransitionService
             var typedScene = _serviceProvider.GetService(sceneType);
             if (typedScene is IScene scene)
             {
+                scene.Init();
                 _application.SetScene(scene);
             }
         }

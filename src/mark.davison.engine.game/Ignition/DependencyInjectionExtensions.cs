@@ -15,13 +15,28 @@ public static class DependencyInjectionExtensions
         return services;
     }
 
+    public static IServiceCollection UseECS(this IServiceCollection services, params Type[] types)
+    {
+        services.AddTransient<ECSWorld>();
+
+        foreach (var t in types.Concat(new[] { typeof(ECSWorld) }).SelectMany(_ => _.Assembly.GetTypes()))
+        {
+            if (t.IsAssignableTo(typeof(ISystem)) && t != typeof(ISystem))
+            {
+                services.AddTransient(t);
+            }
+        }
+
+        return services;
+    }
+
     private static IServiceCollection RegisterGame(this IServiceCollection services, Type[] types)
     {
         foreach (var t in types.SelectMany(_ => _.Assembly.GetTypes()))
         {
             if (t.IsAssignableTo(typeof(IGame)))
             {
-                services.AddTransient(t);
+                services.AddSingleton(t);
             }
             if (t.IsAssignableTo(typeof(IGameRenderer)))
             {

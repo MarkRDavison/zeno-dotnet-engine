@@ -9,5 +9,20 @@ public static class ActionInitialisation
             Primary = InputActivationType.MouseButtonPress,
             PrimaryButton = MouseButton.MOUSE_BUTTON_LEFT
         });
+        inputActionManager.RegisterAction("THRUST", new InputAction
+        {
+            Primary = InputActivationType.KeyHold,
+            PrimaryKey = KeyboardKey.KEY_W
+        });
+        inputActionManager.RegisterAction("ROTATE_CW", new InputAction
+        {
+            Primary = InputActivationType.KeyHold,
+            PrimaryKey = KeyboardKey.KEY_D
+        });
+        inputActionManager.RegisterAction("ROTATE_CCW", new InputAction
+        {
+            Primary = InputActivationType.KeyHold,
+            PrimaryKey = KeyboardKey.KEY_A
+        });
     }
 }

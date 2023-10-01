@@ -6,7 +6,10 @@ public static class ResourceInitialisation
 {
     public static void InitResources(this IServiceProvider provider)
     {
+        // TODO: Move this to config?
         Files.AddHintPath("C:/Workspace/Git/zeno-dotnet-engine");
+        Files.AddHintPath("F:/Workspace/Github/zeno-dotnet-engine");
+
         InitTextures(provider);
         InitSpritesheets(provider);
         InitSounds(provider);

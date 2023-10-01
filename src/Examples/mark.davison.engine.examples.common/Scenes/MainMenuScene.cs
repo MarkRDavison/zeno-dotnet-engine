@@ -39,6 +39,7 @@ public class MainMenuScene : IScene
         };
     }
 
+    public void Init() { }
     public void Update(float delta)
     {
         _lastMouse = _inputManager.GetMousePosition();

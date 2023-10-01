@@ -16,6 +16,11 @@ public abstract class GameScene<TGame, TRenderer> : IScene
         _gameRenderer = gameRenderer;
     }
 
+    public void Init()
+    {
+        Init(_game, _gameRenderer);
+    }
+    public virtual void Init(TGame game, TRenderer gameRenderer) { }
     public void Update(float delta)
     {
         _game.Update(delta);
