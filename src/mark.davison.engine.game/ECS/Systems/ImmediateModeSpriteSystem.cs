@@ -42,7 +42,7 @@ public class ImmediateModeSpriteSystem : ISystem
 
             if (cc != null)
             {
-                renderer.RenderCircleOutline(t.Position + dir * cc.Offset.Y, cc.Radius, Colour.WHITE);
+                renderer.RenderCircleOutline((cc.Transform?.Position ?? t.Position) + dir * cc.Offset.Y, cc.Radius, Colour.WHITE);
             }
         }
     }

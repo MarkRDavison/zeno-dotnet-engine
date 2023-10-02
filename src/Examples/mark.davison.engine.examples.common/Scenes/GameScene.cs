@@ -20,14 +20,7 @@ public class GameScene : GameScene<GameExample, GameRendererExample>
 
         {
             var e = game.ECSWorld.AddEntity("PLAYER_BLUE_1");
-            e.AddComponent<PlayerController>();
-            var t = e.AddComponent<Transform>();
-            t.Position = new Vector2(512.0f + 128.0f, 512.0f);
-            var s = e.AddComponent<Sprite>();
-            s.SpriteName = "playerShip1_blue";
-            var c = e.AddComponent<CircleCollider>();
-            c.Radius = 35.0f;
-            c.Offset = new Vector2(0.0f, -10.0f);
+            Prefabs.CreatePlayerShip(e);
         }
         {
             var e = game.ECSWorld.AddEntity("ENEMY_GREEN_1");

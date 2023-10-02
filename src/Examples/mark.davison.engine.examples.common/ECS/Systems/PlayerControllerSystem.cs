@@ -3,10 +3,15 @@
 public class PlayerControllerSystem : ISystem
 {
     private readonly IInputActionManager _inputActionManager;
+    private readonly ISoundManager _soundManager;
 
-    public PlayerControllerSystem(IInputActionManager inputActionManager)
+    public PlayerControllerSystem(
+        IInputActionManager inputActionManager,
+        ISoundManager soundManager
+    )
     {
         _inputActionManager = inputActionManager;
+        _soundManager = soundManager;
     }
 
     public Func<string?, IEntity>? CreateEntityFunc { get; set; }
@@ -34,7 +39,6 @@ public class PlayerControllerSystem : ISystem
             {
                 var dir = t.Rotation.ToDirection();
                 t.Position += dir * delta * pc.Speed;
-                c.Center = t.Position;
             }
 
             if (_inputActionManager.IsActionInvoked("FIRE"))
@@ -42,6 +46,7 @@ public class PlayerControllerSystem : ISystem
                 if (CreateEntityFunc != null)
                 {
                     Prefabs.Prefabs.CreatePlayerBullet(CreateEntityFunc(null), t.Position + t.Rotation.ToDirection() * 50.0f, t.Rotation);
+                    _soundManager.PlaySound(Random.Shared.Next(100) < 50 ? "laser1" : "laser2");
                 }
             }
         }

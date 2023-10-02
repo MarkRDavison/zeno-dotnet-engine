@@ -1,18 +1,18 @@
 ﻿namespace mark.davison.engine.game.Physics;
 
-public enum RigidBody2DType
+public enum CollisionShapeType
 {
     CIRCLE
 }
 
-public abstract class RigidBody2D : BaseComponent
+public abstract class CollisionShape : BaseComponent
 {
-    public abstract RigidBody2DType Type { get; }
+    public abstract CollisionShapeType Type { get; }
 
-    public bool Collides(RigidBody2D other)
+    public bool Collides(CollisionShape other)
     {
-        if (Type == RigidBody2DType.CIRCLE &&
-            other.Type == RigidBody2DType.CIRCLE)
+        if (Type == CollisionShapeType.CIRCLE &&
+            other.Type == CollisionShapeType.CIRCLE)
         {
             var lhsCircle = this as CircleCollider;
             var rhsCircle = other as CircleCollider;
@@ -20,8 +20,8 @@ public abstract class RigidBody2D : BaseComponent
             if (lhsCircle != null && rhsCircle != null)
             {
                 return DetectCircleCircle(
-                    lhsCircle.Center + lhsCircle.Offset, lhsCircle.Radius,
-                    rhsCircle.Center + rhsCircle.Offset, rhsCircle.Radius);
+                    (lhsCircle.Transform?.Position ?? lhsCircle.Center) + lhsCircle.Offset, lhsCircle.Radius,
+                    (rhsCircle.Transform?.Position ?? rhsCircle.Center) + rhsCircle.Offset, rhsCircle.Radius);
             }
         }
         else
