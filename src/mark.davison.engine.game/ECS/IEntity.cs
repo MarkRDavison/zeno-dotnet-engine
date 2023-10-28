@@ -5,6 +5,7 @@ public interface IEntity
     Guid Id { get; set; }
     string Name { get; set; }
 
+    bool HasComponent<TComponent>() where TComponent : class, IComponent;
     TComponent? GetComponent<TComponent>() where TComponent : class, IComponent;
     TComponent GetRequiredComponent<TComponent>() where TComponent : class, IComponent;
     TComponent AddComponent<TComponent>() where TComponent : IComponent, new();

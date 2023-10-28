@@ -60,4 +60,9 @@ public class Entity : IEntity
             }
         }
     }
+
+    public bool HasComponent<TComponent>() where TComponent : class, IComponent
+    {
+        return GetComponent<TComponent>() != null;
+    }
 }

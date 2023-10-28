@@ -14,6 +14,7 @@ public class GameScene : GameScene<GameExample, GameRendererExample>
 
     public override void Init(GameExample game, GameRendererExample gameRenderer)
     {
+        game.ECSWorld.AddSystem<AsteroidSpawnerSystem>();
         game.ECSWorld.AddSystem<BasicKinematicSystem>();
         game.ECSWorld.AddSystem<PlayerControllerSystem>();
         game.ECSWorld.AddSystem<ImmediateModeSpriteSystem>();
