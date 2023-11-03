@@ -15,6 +15,7 @@ public class PlayerControllerSystem : ISystem
     }
 
     public Func<string?, IEntity>? CreateEntityFunc { get; set; }
+    public Action<IEntity>? AddEntityFunc { get; set; }
 
     public void Update(float delta, IEnumerable<IEntity> entities)
     {

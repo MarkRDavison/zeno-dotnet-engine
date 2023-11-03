@@ -16,6 +16,12 @@ public enum AsteroidType
 
 public static class AsteroidFactory
 {
+    private static Vector2 ToDirection(float rotation)
+    {
+        var (sin, cos) = Math.SinCos(rotation * (float)Math.PI / 180.0f);
+        return new((float)sin, (float)-cos);
+    }
+
     private static readonly Dictionary<AsteroidType, Dictionary<AsteroidSize, List<string>>> _asteroids;
     static AsteroidFactory()
     {
@@ -57,11 +63,27 @@ public static class AsteroidFactory
         a.Type = type;
         a.Size = size;
         var t = e.AddComponent<Transform>();
+        t.Rotation = (float)(Random.Shared.NextDouble() * 360.0f);
         var s = e.AddComponent<Sprite>();
         s.SpriteName = name;
+        var k = e.AddComponent<Kinematic>();
+        k.Velocity = ToDirection(t.Rotation) * 50.0f;
         var c = e.AddComponent<CircleCollider>();
         c.Transform = t;
-        c.Radius = 50.0f;
+        c.Radius = 45.0f;
+
+        if (size == AsteroidSize.MEDIUM)
+        {
+            c.Radius = 20.0f;
+        }
+        if (size == AsteroidSize.SMALL)
+        {
+            c.Radius = 15.0f;
+        }
+        if (size == AsteroidSize.TINY)
+        {
+            c.Radius = 10.0f;
+        }
 
 
         return e;

@@ -63,4 +63,5 @@ public class ImmediateModeSpriteSystem : ISystem
     }
 
     public Func<string?, IEntity>? CreateEntityFunc { get; set; }
+    public Action<IEntity>? AddEntityFunc { get; set; }
 }

@@ -17,6 +17,7 @@ public class GameScene : GameScene<GameExample, GameRendererExample>
         game.ECSWorld.AddSystem<AsteroidSpawnerSystem>();
         game.ECSWorld.AddSystem<BasicKinematicSystem>();
         game.ECSWorld.AddSystem<PlayerControllerSystem>();
+        game.ECSWorld.AddSystem<ScreenWrapperSystem>();
         game.ECSWorld.AddSystem<ImmediateModeSpriteSystem>();
 
         {
