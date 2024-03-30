@@ -11,4 +11,7 @@ public interface IImmediateModeRenderer
     void RenderQuad(Rect target, Rect texture, string textureName, float rotation, Vector2 origin, Colour colour);
     void RenderCircle(Vector2 center, float radius, Colour colour);
     void RenderCircleOutline(Vector2 center, float radius, Colour colour);
+    void RenderModel(Model model, Vector3 center);
+    void Begin3D();
+    void End3D();
 }

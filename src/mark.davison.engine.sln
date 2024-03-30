@@ -501,6 +501,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{B3CA1C
 		..\resources\models\weapon_rifle.obj = ..\resources\models\weapon_rifle.obj
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{AA35D062-EA00-4BF2-BA98-8200DA0719BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

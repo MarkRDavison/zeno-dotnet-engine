@@ -8,10 +8,11 @@
     <PackageId>markdavison.engine.renderer.raylib</PackageId>
     <IsPackable>true</IsPackable>
     <Description>Raylib implementation of Renderer for the engine</Description>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Raylib-cs" Version="4.5.0.4" />
+    <PackageReference Include="Raylib-cs" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>

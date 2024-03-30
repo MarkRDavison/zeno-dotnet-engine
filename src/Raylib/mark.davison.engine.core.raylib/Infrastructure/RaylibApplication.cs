@@ -16,7 +16,7 @@ public class RaylibApplication : Application
 
     public override void Initialise(string title)
     {
-        Raylib.SetConfigFlags(ConfigFlags.FLAG_WINDOW_RESIZABLE);
+        Raylib.SetConfigFlags(ConfigFlags.ResizableWindow);
         Raylib.InitWindow(1440, 900, title);
         Raylib.InitAudioDevice();
     }
@@ -34,7 +34,7 @@ public class RaylibApplication : Application
     public override void BeginRender()
     {
         Raylib.BeginDrawing();
-        Raylib.ClearBackground(Color.SKYBLUE);
+        Raylib.ClearBackground(Color.SkyBlue);
     }
 
     public override void EndRender()

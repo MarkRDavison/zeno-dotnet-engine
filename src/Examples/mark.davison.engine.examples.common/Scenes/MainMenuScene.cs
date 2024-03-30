@@ -34,6 +34,7 @@ public class MainMenuScene : IScene
         {
             "Restart",
             "Play",
+            "ThreeDee",
             "Options",
             "Quit"
         };
@@ -81,6 +82,9 @@ public class MainMenuScene : IScene
                 break;
             case "PLAY":
                 _sceneTransitionService.SetScene(Scenes.Game);
+                break;
+            case "THREEDEE":
+                _sceneTransitionService.SetScene(Scenes.ThreeDee);
                 break;
             case "OPTIONS":
                 _sceneTransitionService.SetScene(Scenes.Options);

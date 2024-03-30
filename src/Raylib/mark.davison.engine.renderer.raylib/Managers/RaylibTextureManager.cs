@@ -7,7 +7,7 @@ public class RaylibTextureManager : ITextureManager<Texture2D>, IDisposable
 
     public RaylibTextureManager()
     {
-        Image isChecked = Raylib.GenImageChecked(64, 64, 8, 8, Color.RED, Color.GREEN);
+        Image isChecked = Raylib.GenImageChecked(64, 64, 8, 8, Color.Red, Color.Green);
         Texture2D texture = Raylib.LoadTextureFromImage(isChecked);
         Raylib.UnloadImage(isChecked);
         _textures = new Dictionary<string, Texture2D>
@@ -23,7 +23,7 @@ public class RaylibTextureManager : ITextureManager<Texture2D>, IDisposable
         return new Texture
         {
             Name = name,
-            Size = new Vector2(texture.width, texture.height)
+            Size = new Vector2(texture.Width, texture.Height)
         };
     }
 

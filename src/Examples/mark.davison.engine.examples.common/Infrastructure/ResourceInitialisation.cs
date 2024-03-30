@@ -13,6 +13,7 @@ public static class ResourceInitialisation
         InitTextures(provider);
         InitSpritesheets(provider);
         InitSounds(provider);
+        InitModels(provider);
     }
 
     private static void InitTextures(IServiceProvider provider)
@@ -34,6 +35,21 @@ public static class ResourceInitialisation
         LoadSound(sm, "shield_up", "resources/sounds/sfx_shieldUp.ogg");
         LoadSound(sm, "two_tone", "resources/sounds/sfx_twoTone.ogg");
         LoadSound(sm, "zap", "resources/sounds/sfx_zap.ogg");
+    }
+
+    private static void InitModels(IServiceProvider provider)
+    {
+        var mm = provider.GetRequiredService<IModelManager>();
+
+        LoadModel(mm, "satelliteDish_large", "resources/models/satelliteDish_large.obj");
+    }
+
+    private static void LoadModel(IModelManager mm, string modelName, string modelPath)
+    {
+        if (!mm.LoadModel(modelName, modelPath))
+        {
+            throw new InvalidOperationException($"Could not find model: {modelName} at '{modelPath}'");
+        }
     }
 
     private static void LoadSound(ISoundManager sm, string soundName, string soundPath)

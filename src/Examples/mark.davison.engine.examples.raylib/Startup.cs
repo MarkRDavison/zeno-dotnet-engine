@@ -1,7 +1,4 @@
-﻿using mark.davison.engine.core.abstractions.Infrastructure;
-using mark.davison.engine.examples.common.Infrastructure;
-
-namespace mark.davison.engine.examples.raylib;
+﻿namespace mark.davison.engine.examples.raylib;
 
 public class Startup
 {
